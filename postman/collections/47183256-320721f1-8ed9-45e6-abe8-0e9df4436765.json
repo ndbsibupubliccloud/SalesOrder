@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "47183256-320721f1-8ed9-45e6-abe8-0e9df4436765",
+		"name": "Sales Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salesorder Get",
+			"id": "47183256-32af2ae7-31de-4fb2-b415-0a4e1cb63425",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/salesorder/0001/SalesOrder('2101000113')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_salesorder",
+						"srvd_a2x",
+						"sap",
+						"salesorder",
+						"0001",
+						"SalesOrder('2101000113')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SalesorderPost",
+			"id": "47183256-fc5cfee0-c987-4a3e-8be6-ad96a17c0142",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "iDXnHMaok8xR4vtbH1zZ-A==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//    \"SalesOrder\": \" \",\r\n   \"SalesOrderType\": \"TA\",\r\n   \"SoldToParty\": \"0000102256\",\r\n   \"SalesOrganization\": \"1000\",\r\n   \"DistributionChannel\": \"10\",\r\n   \"OrganizationDivision\": \"00\",\r\n  // \"SalesGroup\": \"string\",\r\n  // \"SalesDistrict\": \"string\",\r\n   \"PurchaseOrderByCustomer\": \"Test123\",\r\n   //\"PurchaseOrderByShipToParty\": \"string\",\r\n  // \"CustomerPurchaseOrderType\": \"string\",\r\n//    \"CustomerPurchaseOrderDate\": \"2017-04-13\",\r\n//    \"CorrespncExternalReference\": \"string\",\r\n//    \"CorrespncExtRefByShipToParty\": \"string\",\r\n//    \"ReferenceSDDocument\": \"string\",\r\n//    \"SDDocumentReason\": \"string\",\r\n   \"SalesOrderDate\": \"2025-11-03\",\r\n   \"RequestedDeliveryDate\": \"2025-11-04\",\r\n    \"PricingDate\": \"2025-11-04\",\r\n//    \"ServicesRenderedDate\": \"2017-04-13\",\r\n    \"BillingDocumentDate\": \"2025-11-04\",\r\n   \"TransactionCurrency\": \"INR\",\r\n //  \"DeliveryDateTypeRule\": \"string\",\r\n//    \"ShippingCondition\": \"string\",\r\n//    \"CompleteDeliveryIsDefined\": true,\r\n//    \"SlsDocIsRlvtForProofOfDeliv\": true,\r\n//    \"ShippingType\": \"string\",\r\n//    \"ReceivingPoint\": \"string\",\r\n    \"IncotermsClassification\": \"FOB\",\r\n//    \"IncotermsVersion\": \"string\",\r\n//    \"IncotermsLocation1\": \"string\",\r\n//    \"IncotermsLocation2\": \"string\",\r\n//    \"CustomerPriceGroup\": \"string\",\r\n//    \"PriceListType\": \"string\",\r\n//    \"FixedValueDate\": \"2017-04-13\",\r\n//    \"TaxDepartureCountry\": \"string\",\r\n//    \"VATRegistrationCountry\": \"string\",\r\n//    \"IsEUTriangularDeal\": true,\r\n   \"CustomerPaymentTerms\": \"Z011\",\r\n//    \"PaymentMethod\": \"string\",\r\n//    \"CustomerAccountAssignmentGroup\": \"string\",\r\n//    \"AssignmentReference\": \"string\",\r\n//    \"AccountingDocExternalReference\": \"string\",\r\n//    \"HeaderBillingBlockReason\": \"string\",\r\n//    \"DeliveryBlockReason\": \"string\",\r\n//    \"SlsContrAutoAssgmtIDForSlsOrd\": \"string\",\r\n    \"CustomerGroup\": \"Z2\",\r\n//    \"AdditionalCustomerGroup1\": \"string\",\r\n//    \"AdditionalCustomerGroup2\": \"string\",\r\n//    \"AdditionalCustomerGroup3\": \"string\",\r\n//    \"AdditionalCustomerGroup4\": \"string\",\r\n//    \"AdditionalCustomerGroup5\": \"string\",\r\n   \"_Item\": [\r\n      {\r\n         //\"SalesOrderItem\": \"000010\",\r\n         // \"HigherLevelItem\": \"null\",\r\n         \"SalesOrderItemCategory\": \"TAN\",\r\n        \"SalesOrderItemText\": \"DOMS CUBOID DF PEN RED 20 PCS PACK\",\r\n         \"Product\": \"FAJ11AK0011\",\r\n         \"ProductGroup\": \"FAJ\",\r\n       //  \"MaterialByCustomer\": \"string\",\r\n        //  \"InternationalArticleNumber\": \"string\",\r\n         \"PurchaseOrderByCustomer\": \"Test123\",\r\n        //  \"UnderlyingPurchaseOrderItem\": \"string\",\r\n        //  \"CorrespncExternalReference\": \"string\",\r\n        //  \"PurchaseOrderByShipToParty\": \"string\",\r\n        //  \"UndrlgPurOrdItmByShipToParty\": \"string\",\r\n        //  \"CorrespncExtRefByShipToParty\": \"string\",\r\n          \"RequestedQuantity\": 12,\r\n          \"RequestedQuantitySAPUnit\": \"NOS\",\r\n          \"RequestedQuantityISOUnit\": \"_01\",\r\n        //  \"ReferenceSDDocument\": \"string\",\r\n        //  \"ReferenceSDDocumentItem\": \"string\",\r\n        \"ItemGrossWeight\": 100,\r\n         \"ItemNetWeight\": 100,\r\n         \"ItemWeightSAPUnit\": \"G\",\r\n         \"ItemWeightISOUnit\": \"GRM\",\r\n        // \"ItemVolume\": 0,\r\n        // \"ItemVolumeSAPUnit\": \"string\",\r\n        // \"ItemVolumeISOUnit\": \"string\",\r\n         \"RequestedDeliveryDate\": \"2025-11-04\",\r\n          \"PricingDate\": \"2025-11-04\",\r\n        //  \"ServicesRenderedDate\": \"2017-04-13\",\r\n        //  \"BillingDocumentDate\": \"2017-04-13\",\r\n        //  \"CustomerGroup\": \"string\",\r\n        //  \"Batch\": \"string\",\r\n         \"Plant\": \"8100\",\r\n         //\"StorageLocation\": \"1153\",\r\n        //  \"ShippingPoint\": \"string\",\r\n        //  \"ShippingType\": \"string\",\r\n        //  \"Route\": \"string\",\r\n        //  \"DeliveryPriority\": \"string\",\r\n        //  \"PartialDeliveryIsAllowed\": \"string\",\r\n        //  \"MaxNmbrOfPartialDelivery\": 0,\r\n        //  \"DeliveryDateTypeRule\": \"string\",\r\n        //  \"ReceivingPoint\": \"string\",\r\n        //  \"DeliveryGroup\": \"string\",\r\n         \"IncotermsClassification\": \"FOB\",\r\n        \"IncotermsLocation1\": \"Free on board\",\r\n        //  \"IncotermsLocation2\": \"string\",\r\n         \"CustomerPaymentTerms\": \"Z011\"\r\n        //  \"FixedValueDate\": \"2017-04-13\",\r\n        //  \"CustomerPriceGroup\": \"string\",\r\n        //  \"MaterialPricingGroup\": \"string\",\r\n        //  \"ProfitCenter\": \"\",\r\n        //  \"MatlAccountAssignmentGroup\": \"string\",\r\n        //  \"WBSElementExternalID\": \"string\",\r\n        //  \"ItemBillingBlockReason\": \"string\",\r\n        //  \"SalesDocumentRjcnReason\": \"string\",\r\n        //  \"SlsContrAutoAssgmtIDForSlsOrd\": \"string\"\r\n      }    \r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/salesorder/0001/SalesOrder",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_salesorder",
+						"srvd_a2x",
+						"sap",
+						"salesorder",
+						"0001",
+						"SalesOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salesorder update",
+			"id": "47183256-3a026fcf-5d5f-41d1-a2b5-ff3ab0bc5a65",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "iDXnHMaok8xR4vtbH1zZ-A==",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "W/\"SADL-202511031223377484470C~20251103122337.7484470\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //    \"SalesOrder\": \" \",\r\n    //   \"SalesOrderType\": \"TA\",\r\n    //   \"SoldToParty\": \"0000102256\",\r\n    //   \"SalesOrganization\": \"1000\",\r\n    //  \"DistributionChannel\": \"10\",\r\n    //  \"OrganizationDivision\": \"00\",\r\n    // \"SalesGroup\": \"string\",\r\n    // \"SalesDistrict\": \"string\",\r\n    \"PurchaseOrderByCustomer\": \"Test123\",\r\n    //\"PurchaseOrderByShipToParty\": \"string\",\r\n    // \"CustomerPurchaseOrderType\": \"string\",\r\n    //    \"CustomerPurchaseOrderDate\": \"2017-04-13\",\r\n    //    \"CorrespncExternalReference\": \"string\",\r\n    //    \"CorrespncExtRefByShipToParty\": \"string\",\r\n    //    \"ReferenceSDDocument\": \"string\",\r\n    //    \"SDDocumentReason\": \"string\",\r\n    // \"SalesOrderDate\": \"2025-11-03\",\r\n    // \"RequestedDeliveryDate\": \"2025-11-04\",\r\n    // \"PricingDate\": \"2025-11-04\",\r\n    //    \"ServicesRenderedDate\": \"2017-04-13\",\r\n    // \"BillingDocumentDate\": \"2025-11-04\",\r\n    \"TransactionCurrency\": \"USD\",\r\n    //  \"DeliveryDateTypeRule\": \"string\",\r\n    //    \"ShippingCondition\": \"string\",\r\n    //    \"CompleteDeliveryIsDefined\": true,\r\n    //    \"SlsDocIsRlvtForProofOfDeliv\": true,\r\n    //    \"ShippingType\": \"string\",\r\n    //    \"ReceivingPoint\": \"string\",\r\n    // \"IncotermsClassification\": \"FOB\",\r\n    //    \"IncotermsVersion\": \"string\",\r\n    //    \"IncotermsLocation1\": \"string\",\r\n    //    \"IncotermsLocation2\": \"string\",\r\n    //    \"CustomerPriceGroup\": \"string\",\r\n    //    \"PriceListType\": \"string\",\r\n    //    \"FixedValueDate\": \"2017-04-13\",\r\n    //    \"TaxDepartureCountry\": \"string\",\r\n    //    \"VATRegistrationCountry\": \"string\",\r\n    //    \"IsEUTriangularDeal\": true,\r\n    // \"CustomerPaymentTerms\": \"Z011\",\r\n    //    \"PaymentMethod\": \"string\",\r\n    //    \"CustomerAccountAssignmentGroup\": \"string\",\r\n        \"AssignmentReference\": \"string\"\r\n    //    \"AccountingDocExternalReference\": \"string\",\r\n    //    \"HeaderBillingBlockReason\": \"string\",\r\n    //    \"DeliveryBlockReason\": \"string\",\r\n    //    \"SlsContrAutoAssgmtIDForSlsOrd\": \"string\",\r\n    // \"CustomerGroup\": \"Z2\",\r\n    //    \"AdditionalCustomerGroup1\": \"string\",\r\n    //    \"AdditionalCustomerGroup2\": \"string\",\r\n    //    \"AdditionalCustomerGroup3\": \"string\",\r\n    //    \"AdditionalCustomerGroup4\": \"string\",\r\n    //    \"AdditionalCustomerGroup5\": \"string\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/salesorder/0001/SalesOrder('2101000122')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_salesorder",
+						"srvd_a2x",
+						"sap",
+						"salesorder",
+						"0001",
+						"SalesOrder('2101000122')"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
