@@ -55,6 +55,55 @@
 			"response": []
 		},
 		{
+			"name": "Salesorder Get Copy",
+			"id": "47183256-15195c81-cccb-4d4a-89d9-51862546c11a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/salesorder/0001/SalesOrder('2101000113')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_salesorder",
+						"srvd_a2x",
+						"sap",
+						"salesorder",
+						"0001",
+						"SalesOrder('2101000113')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "SalesorderPost",
 			"id": "47183256-fc5cfee0-c987-4a3e-8be6-ad96a17c0142",
 			"protocolProfileBehavior": {
